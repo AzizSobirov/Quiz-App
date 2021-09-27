@@ -16,5 +16,5 @@ function started(){
 }
 function scrollToNext(val){
     el_app.style.transform=`translateX(-${val}%)`
-    el_app.style.transition='1.5s ease'
+    el_app.style.transition='1s'
 }

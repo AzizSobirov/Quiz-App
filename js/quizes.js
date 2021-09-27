@@ -15,14 +15,32 @@ let quizes = [
             option2: 2,
             option3: 3
         }
+    },{
+        quiz:'What is the output of 5 - 5',
+        answer: 0,
+        options: {
+            option1: 1,
+            option2: 0,
+            option3: 3
+        }
+    },{
+        quiz:'What is the output of 1 + 4',
+        answer: 5,
+        options: {
+            option1: 5,
+            option2: 2,
+            option3: 3
+        }
     }
 ]
 
 
 let quiz = document.querySelector('.app_quiz')
 let indexQuiz = 0
+let score = 0
 
 function loadQuiz(i){
+    console.log(score);
     quiz.innerHTML=`
     <div class="quiz-box">
         <h3>${quizes[i].quiz}</h3>
@@ -47,24 +65,36 @@ function loadQuiz(i){
 function nextQuiz(val){
     let quiz_bx = document.querySelector(".quiz-box")
     let quiz_inp = document.querySelectorAll('.quiz_opt')
-    let audio = new Audio()
+    // let audio = new Audio()
+
+    // for(let i=0;i<quiz_inp.length;i++){
+    //     if(quiz_inp[i].checked && quiz_inp[i].value == quizes[val].answer){
+    //         audio.src="./sounds/correct.mp3"
+    //         audio.play()
+    //         quiz_bx.style.background='#2292A4'
+    //         quiz_bx.style.color='#fff'
+    //     }else{
+    //         audio.src="./sounds/death_game.mp3"
+    //         audio.play()
+    //         quiz_bx.style.background='#ff0066'
+    //         quiz_bx.style.color='#fff'
+    //         quiz_inp[i].style.boxShadow="0 0 0 2.5px #ff0066"
+    //     }
+    // }
 
     for(let i=0;i<quiz_inp.length;i++){
         if(quiz_inp[i].checked && quiz_inp[i].value == quizes[val].answer){
-            audio.src="./sounds/correct.mp3"
-            audio.play()
-            quiz_bx.style.background='#2292A4'
-            quiz_bx.style.color='#fff'
-        }else{
-            audio.src="./sounds/death_game.mp3"
-            audio.play()
-            quiz_bx.style.background='#ff0066'
-            quiz_bx.style.color='#fff'
-            quiz_inp[i].style.boxShadow="0 0 0 2.5px #ff0066"
+            score += 100
         }
     }
 
-    indexQuiz++
-    loadQuiz(indexQuiz)
+    if(quizes.length - 1 == indexQuiz){
+        let resultQuiz = document.querySelector(".app_result")
+        resultQuiz.innerHTML=`<h3>Your Score: ${score}ball</h3>`
+        started()
+    }else{
+        indexQuiz++
+        loadQuiz(indexQuiz)
+    }
 }
 
