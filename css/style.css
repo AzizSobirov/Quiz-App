@@ -270,8 +270,4 @@ b {
 .app .quiz-box form label:not(:last-child) {
   margin-bottom: 5px;
 }
-
-.app_home, .app_started {
-  display: none;
-}
 /*# sourceMappingURL=style.css.map */
