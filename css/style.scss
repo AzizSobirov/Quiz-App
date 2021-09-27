@@ -1,0 +1,120 @@
+@import 'other';
+
+.main{
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+}
+.app{
+    min-height: 100vh;
+    max-width: 100vw;
+    @include flexbox;
+    justify-content: flex-start;
+
+    &_home,&_started,&_quiz{
+        min-height: 100vh;
+        min-width: 100vw;
+        padding: 0 5vw;
+        @include flexbox;
+        flex-direction: column;
+        text-align: center;
+        p{
+            margin: 10px 0;
+            color: #00000090;
+        }
+    }
+    &_started{
+        padding: 0 5vw;
+        form{
+            width: 100%;
+            @include flexbox;
+            flex-direction: column;
+            fieldset{
+                padding: 0 5px;
+                width: 80%;
+                border-radius:10px;
+                border:2px solid #00000080;
+                outline: none;
+                legend{
+                    margin-left: 10px;
+                    font-weight: 700;
+                    text-align: left;
+                    color: #00000080;
+                }
+                input{
+                    width: 100%;
+                    padding: 5px;
+                    border:none;
+                    outline: none;
+                    font-size: 16px;
+                    font-weight: 500;
+                    background: transparent;
+                    &::placeholder{
+                        transition: 2s;
+                    }
+                    &:focus::placeholder{
+                        transform: translateX(-100%);
+                    }
+                }
+                &:not(:first-child){
+                    margin-top: 10px;
+                }
+            }
+            #as_btn{
+                margin-top: 20px;
+            }
+        }
+    }
+    // &_home,&_started{display: none;}
+
+
+    // quiz
+    .quiz-box{
+        padding: 20px;
+        background: #f1f1f1;
+        @include flexbox;
+        flex-direction: column;
+        form{
+            margin: 10px 0;
+            width: 100%;
+            align-self: flex-start;
+            label{
+                height: 40px;
+                width: 100%;
+                padding: 10px;
+                background: #eaebeb80;
+                @include flexbox;
+                justify-content: flex-start;
+                h4{
+                    margin-left: 10px;
+                }
+                input{
+                    -webkit-appearance: none;
+                    height: 15px;
+                    width: 15px;
+                    background: #fff;
+                    border-radius: 50%;
+                    transition: 0.5s;
+                    box-shadow: 0 0 0 2.5px #38b8d0;
+                    &:checked{
+                        box-shadow: 0 0 0 2.5px #38b8d0,
+                        inset 0 0 0 2px #fff, 
+                        inset 0 0 0 10px #38b8d0;
+                    }
+                }
+                &:not(:last-child){
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        #as_btn{
+            background: #686969;
+            a{color: #fff;}
+            &:hover{
+                a{color: #000;}
+                &::before{background: #fff;}
+            }
+        }
+    }    
+
+}

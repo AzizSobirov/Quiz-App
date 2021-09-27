@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+input, select, button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+b {
+  font-weight: 500;
+}
+
+.btn {
+  padding: 7px 30px;
+  color: #fff;
+  background: #156963;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: #1b8b84;
+}
+
+.main {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  max-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app_home, .app_started, .app_quiz {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.app_home p, .app_started p, .app_quiz p {
+  margin: 10px 0;
+  color: #00000090;
+}
+
+.app_started {
+  padding: 0 5vw;
+}
+
+.app_started form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app_started form fieldset {
+  padding: 0 5px;
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid #00000080;
+  outline: none;
+}
+
+.app_started form fieldset legend {
+  margin-left: 10px;
+  font-weight: 700;
+  text-align: left;
+  color: #00000080;
+}
+
+.app_started form fieldset input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  background: transparent;
+}
+
+.app_started form fieldset input::-webkit-input-placeholder {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.app_started form fieldset input:-ms-input-placeholder {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.app_started form fieldset input::-ms-input-placeholder {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.app_started form fieldset input::placeholder {
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.app_started form fieldset input:focus::-webkit-input-placeholder {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.app_started form fieldset input:focus:-ms-input-placeholder {
+  transform: translateX(-100%);
+}
+
+.app_started form fieldset input:focus::-ms-input-placeholder {
+  transform: translateX(-100%);
+}
+
+.app_started form fieldset input:focus::placeholder {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.app_started form fieldset:not(:first-child) {
+  margin-top: 10px;
+}
+
+.app_started form #as_btn {
+  margin-top: 20px;
+}
+
+.app .quiz-box {
+  padding: 20px;
+  background: #f1f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .quiz-box form {
+  margin: 10px 0;
+  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.app .quiz-box form label {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  background: #eaebeb80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app .quiz-box form label h4 {
+  margin-left: 10px;
+}
+
+.app .quiz-box form label input {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 0 0 2.5px #38b8d0;
+          box-shadow: 0 0 0 2.5px #38b8d0;
+}
+
+.app .quiz-box form label input:checked {
+  -webkit-box-shadow: 0 0 0 2.5px #38b8d0, inset 0 0 0 2px #fff,  inset 0 0 0 10px #38b8d0;
+          box-shadow: 0 0 0 2.5px #38b8d0, inset 0 0 0 2px #fff,  inset 0 0 0 10px #38b8d0;
+}
+
+.app .quiz-box form label:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.app .quiz-box #as_btn {
+  background: #686969;
+}
+
+.app .quiz-box #as_btn a {
+  color: #fff;
+}
+
+.app .quiz-box #as_btn:hover a {
+  color: #000;
+}
+
+.app .quiz-box #as_btn:hover::before {
+  background: #fff;
+}
+/*# sourceMappingURL=style.css.map */

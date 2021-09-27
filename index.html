@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://aziz-sobirov.github.io/AS-library/css/as.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <div id="navbar"></div>
+
+    <!-- main -->
+    <div class="app">
+        <div class="app_home">
+            <h2>The 100% engagement platform</h2>
+            <p>Find and create free gamified quizzes and interactive lessons to engage any learner.</p>
+            <div id="as_btn" onclick="started()"><a href="#">Get Started</a></div>
+        </div>
+    
+        <!-- get started -->
+        <div class="app_started">
+            <form action="">
+                <fieldset>
+                    <legend>Your Name</legend>
+                    <input type="text" placeholder="Your Name" id="contact_name">
+                </fieldset>
+                <fieldset>
+                    <legend>Your Email</legend>
+                    <input type="email" placeholder="Your Email" id="contact_email">
+                </fieldset>
+                <div id="as_btn" onclick="started()"><a href="#">Next</a></div>
+            </form>
+        </div>
+
+        <!-- quizes -->
+        <div class="app_quiz"></div>
+    </div>
+</div>
+    
+    
+    <script src="./js/app.js"></script>
+    <script src="./js/quizes.js"></script>
+    <script src="https://aziz-sobirov.github.io/AS-library/js/as.js"></script>
+</body>
+</html>
