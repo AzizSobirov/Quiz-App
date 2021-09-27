@@ -72,6 +72,18 @@ b {
           justify-content: flex-start;
 }
 
+.app #as_btn {
+  background: #2293a4;
+}
+
+.app #as_btn a {
+  color: #fff;
+}
+
+.app #as_btn:hover::before {
+  background: #187886;
+}
+
 .app_home, .app_started, .app_quiz, .app_result {
   min-height: 100vh;
   min-width: 100vw;
@@ -192,6 +204,7 @@ b {
 .app .quiz-box {
   padding: 20px;
   background: #f1f1f1;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +231,8 @@ b {
   height: 40px;
   width: 100%;
   padding: 10px;
-  background: #eaebeb80;
+  background: #e5e7e7;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,36 +255,23 @@ b {
   -webkit-appearance: none;
   height: 15px;
   width: 15px;
-  background: #fff;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 0 0 0 2.5px #38b8d0;
-          box-shadow: 0 0 0 2.5px #38b8d0;
+  -webkit-box-shadow: 0 0 0 2.5px #2293a4;
+          box-shadow: 0 0 0 2.5px #2293a4;
 }
 
 .app .quiz-box form label input:checked {
-  -webkit-box-shadow: 0 0 0 2.5px #38b8d0, inset 0 0 0 2px #fff,  inset 0 0 0 10px #38b8d0;
-          box-shadow: 0 0 0 2.5px #38b8d0, inset 0 0 0 2px #fff,  inset 0 0 0 10px #38b8d0;
+  -webkit-box-shadow: 0 0 0 2.5px #2293a4, inset 0 0 0 2px #fff,  inset 0 0 0 10px #2293a4;
+          box-shadow: 0 0 0 2.5px #2293a4, inset 0 0 0 2px #fff,  inset 0 0 0 10px #2293a4;
 }
 
 .app .quiz-box form label:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.app .quiz-box #as_btn {
-  background: #686969;
-}
-
-.app .quiz-box #as_btn a {
-  color: #fff;
-}
-
-.app .quiz-box #as_btn:hover a {
-  color: #000;
-}
-
-.app .quiz-box #as_btn:hover::before {
-  background: #fff;
+.app_home, .app_started {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,19 +1,19 @@
 let quizes = [
     {
-        quiz:'What is the output of 5 - 2',
-        answer: 3,
+        quiz:'The negative of had ?',
+        answer: "didn't have",
         options: {
-            option1: 1,
-            option2: 2,
-            option3: 3
+            option1: "didn't have",
+            option2: "didn't had",
+            option3: "didn't say"
         }
     },{
-        quiz:'What is the output of 5 - 4',
-        answer: 1,
+        quiz:'Choose two answers: The negative of became.',
+        answer: "didn't become",
         options: {
-            option1: 1,
-            option2: 2,
-            option3: 3
+            option1: "didn became",
+            option2: "didn't cut",
+            option3: "didn't become"
         }
     },{
         quiz:'What is the output of 5 - 5',
@@ -24,12 +24,12 @@ let quizes = [
             option3: 3
         }
     },{
-        quiz:'What is the output of 1 + 4',
-        answer: 5,
+        quiz:'What is the output of 25 * 53',
+        answer: 25 * 53,
         options: {
-            option1: 5,
-            option2: 2,
-            option3: 3
+            option1: 25 * 53,
+            option2: 25 * 55,
+            option3: 25 * 34
         }
     }
 ]

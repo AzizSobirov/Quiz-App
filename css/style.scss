@@ -11,6 +11,14 @@
     @include flexbox;
     justify-content: flex-start;
 
+    #as_btn{
+        background: #2293a4;
+        a{color: #fff;}
+        &:hover{
+            &::before{background: #187886;}
+        }
+    }
+
     &_home,&_started,&_quiz,&_result{
         min-height: 100vh;
         min-width: 100vw;
@@ -71,6 +79,7 @@
     .quiz-box{
         padding: 20px;
         background: #f1f1f1;
+        border-radius: 5px;
         @include flexbox;
         flex-direction: column;
         form{
@@ -81,7 +90,8 @@
                 height: 40px;
                 width: 100%;
                 padding: 10px;
-                background: #eaebeb80;
+                background: #e5e7e7;
+                border-radius: 5px;
                 @include flexbox;
                 justify-content: flex-start;
                 h4{
@@ -91,14 +101,13 @@
                     -webkit-appearance: none;
                     height: 15px;
                     width: 15px;
-                    background: #fff;
                     border-radius: 50%;
                     transition: 0.5s;
-                    box-shadow: 0 0 0 2.5px #38b8d0;
+                    box-shadow: 0 0 0 2.5px #2293a4;
                     &:checked{
-                        box-shadow: 0 0 0 2.5px #38b8d0,
+                        box-shadow: 0 0 0 2.5px #2293a4,
                         inset 0 0 0 2px #fff, 
-                        inset 0 0 0 10px #38b8d0;
+                        inset 0 0 0 10px #2293a4;
                     }
                 }
                 &:not(:last-child){
@@ -106,16 +115,9 @@
                 }
             }
         }
-        #as_btn{
-            background: #686969;
-            a{color: #fff;}
-            &:hover{
-                a{color: #000;}
-                &::before{background: #fff;}
-            }
-        }
+        
     }    
 
+    &_home,&_started{display: none;}
 }
 
-    // &_home,&_started{display: none;}
