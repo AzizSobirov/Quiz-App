@@ -72,7 +72,7 @@ b {
           justify-content: flex-start;
 }
 
-.app_home, .app_started, .app_quiz {
+.app_home, .app_started, .app_quiz, .app_result {
   min-height: 100vh;
   min-width: 100vw;
   padding: 0 5vw;
@@ -92,7 +92,7 @@ b {
   text-align: center;
 }
 
-.app_home p, .app_started p, .app_quiz p {
+.app_home p, .app_started p, .app_quiz p, .app_result p {
   margin: 10px 0;
   color: #00000090;
 }
