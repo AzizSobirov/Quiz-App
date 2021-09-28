@@ -101,12 +101,12 @@ function nextQuiz(val){
         let ansUnCorrect = quizes.length - ansCorrect;
 
         resultQuiz.innerHTML=`
-<h3>All ${quizes.length} tests</h3><br>
+<div class="quiz-box">
+<h4>All ${quizes.length} tests</h4><br>
 <h3>Your Score: ${score}ball</h3><br>
-<h3>Correct answers: ${ansCorrect}</h3>
-<h3>Uncorrect answers: ${ansUnCorrect}</h3>
-
-`
+<h4>Correct answers: ${ansCorrect}</h4>
+<h4>Uncorrect answers: ${ansUnCorrect}</h4>
+</div>`
         started()
     }else{
         indexQuiz++

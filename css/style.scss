@@ -5,24 +5,31 @@
     max-width: 100vw;
     overflow: hidden;
 }
+#navbar{
+    h2{
+        color: #fff;
+    }
+    span{
+        background: #fff;
+    }
+}
+#as_btn{
+    background: #2293a4;
+    a{color: #fff;}
+    &:hover{
+        &::before{background: #187886;}
+    }
+}
 .app{
     min-height: 100vh;
     max-width: 100vw;
     @include flexbox;
     justify-content: flex-start;
-
-    #as_btn{
-        background: #2293a4;
-        a{color: #fff;}
-        &:hover{
-            &::before{background: #187886;}
-        }
-    }
-
     &_home,&_started,&_quiz,&_result{
         min-height: 100vh;
         min-width: 100vw;
         padding: 0 5vw;
+        background: linear-gradient(-35deg,#2293a4 0% 30%,#fff 30% 70%,#2293a4 70% 100%);
         @include flexbox;
         flex-direction: column;
         text-align: center;
@@ -30,6 +37,9 @@
             margin: 10px 0;
             color: #00000090;
         }
+    }
+    &_started,&_result{
+        background: linear-gradient(35deg,#2293a4 0% 30%,#fff 30% 70%,#2293a4 70% 100%);
     }
     &_started{
         padding: 0 5vw;
@@ -79,7 +89,8 @@
     .quiz-box{
         padding: 20px;
         width: 100%;
-        background: #f1f1f1;
+        background: #f1f1f180;
+        backdrop-filter: blur(10px);
         border-radius: 5px;
         @include flexbox;
         flex-direction: column;
@@ -91,7 +102,7 @@
                 height: 40px;
                 width: 100%;
                 padding: 10px;
-                background: #e5e7e7;
+                background: #e5e7e780;
                 border-radius: 5px;
                 @include flexbox;
                 justify-content: flex-start;
@@ -119,7 +130,7 @@
         
     }    
 
-    &_home,&_started{display: none;}
+    // &_home,&_started{display: none;}
 }
 
 

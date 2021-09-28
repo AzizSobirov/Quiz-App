@@ -55,6 +55,26 @@ b {
   overflow: hidden;
 }
 
+#navbar h2 {
+  color: #fff;
+}
+
+#navbar span {
+  background: #fff;
+}
+
+#as_btn {
+  background: #2293a4;
+}
+
+#as_btn a {
+  color: #fff;
+}
+
+#as_btn:hover::before {
+  background: #187886;
+}
+
 .app {
   min-height: 100vh;
   max-width: 100vw;
@@ -72,22 +92,11 @@ b {
           justify-content: flex-start;
 }
 
-.app #as_btn {
-  background: #2293a4;
-}
-
-.app #as_btn a {
-  color: #fff;
-}
-
-.app #as_btn:hover::before {
-  background: #187886;
-}
-
 .app_home, .app_started, .app_quiz, .app_result {
   min-height: 100vh;
   min-width: 100vw;
   padding: 0 5vw;
+  background: linear-gradient(-35deg, #2293a4 0% 30%, #fff 30% 70%, #2293a4 70% 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,6 +116,10 @@ b {
 .app_home p, .app_started p, .app_quiz p, .app_result p {
   margin: 10px 0;
   color: #00000090;
+}
+
+.app_started, .app_result {
+  background: linear-gradient(35deg, #2293a4 0% 30%, #fff 30% 70%, #2293a4 70% 100%);
 }
 
 .app_started {
@@ -204,7 +217,9 @@ b {
 .app .quiz-box {
   padding: 20px;
   width: 100%;
-  background: #f1f1f1;
+  background: #f1f1f180;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,7 +247,7 @@ b {
   height: 40px;
   width: 100%;
   padding: 10px;
-  background: #e5e7e7;
+  background: #e5e7e780;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -270,10 +285,6 @@ b {
 
 .app .quiz-box form label:not(:last-child) {
   margin-bottom: 5px;
-}
-
-.app_home, .app_started {
-  display: none;
 }
 
 @media (min-width: 758px) {
