@@ -1,6 +1,6 @@
 let quizes = [
     {
-        quiz:'The negative of had ?',
+        quiz:'Choose the answer: The negative of had.',
         answer: "didn't have",
         options: {
             option1: "didn't have",
@@ -8,7 +8,7 @@ let quizes = [
             option3: "didn't say"
         }
     },{
-        quiz:'Choose two answers: The negative of became.',
+        quiz:'Choose the answer: The negative of became.',
         answer: "didn't become",
         options: {
             option1: "didn became",
@@ -16,20 +16,44 @@ let quizes = [
             option3: "didn't become"
         }
     },{
-        quiz:'What is the output of 5 - 5',
-        answer: 0,
+        quiz:'Choose the correct sentence in negative of She wrote a letter.',
+        answer: "She didn't write a letter.",
         options: {
-            option1: 1,
-            option2: 0,
-            option3: 3
+            option1: "She didn't wrote a card.",
+            option2: "She didn't write a letter.",
+            option3: "She didn't writed a letter."
         }
     },{
-        quiz:'What is the output of 25 * 53',
-        answer: 25 * 53,
+        quiz:'They _____________ the project yet',
+        answer: "Hadn't completed",
         options: {
-            option1: 25 * 53,
-            option2: 25 * 55,
-            option3: 25 * 34
+            option1: "Hadn't completed",
+            option2: "Haven't completed",
+            option3: "Hasn't completed"
+        }
+    },{
+        quiz:'She _________ in this place before.',
+        answer: "had worked",
+        options: {
+            option1: "has worked",
+            option2: "had worked",
+            option3: "have worked"
+        }
+    },{
+        quiz:'Past of walk',
+        answer: "walked",
+        options: {
+            option1: "walkeed",
+            option2: "walk",
+            option3: "walked"
+        }
+    },{
+        quiz:'Past of take',
+        answer: "took",
+        options: {
+            option1: "taked",
+            option2: "take",
+            option3: "took"
         }
     }
 ]
@@ -65,23 +89,6 @@ function loadQuiz(i){
 function nextQuiz(val){
     let quiz_bx = document.querySelector(".quiz-box")
     let quiz_inp = document.querySelectorAll('.quiz_opt')
-    // let audio = new Audio()
-
-    // for(let i=0;i<quiz_inp.length;i++){
-    //     if(quiz_inp[i].checked && quiz_inp[i].value == quizes[val].answer){
-    //         audio.src="./sounds/correct.mp3"
-    //         audio.play()
-    //         quiz_bx.style.background='#2292A4'
-    //         quiz_bx.style.color='#fff'
-    //     }else{
-    //         audio.src="./sounds/death_game.mp3"
-    //         audio.play()
-    //         quiz_bx.style.background='#ff0066'
-    //         quiz_bx.style.color='#fff'
-    //         quiz_inp[i].style.boxShadow="0 0 0 2.5px #ff0066"
-    //     }
-    // }
-
     for(let i=0;i<quiz_inp.length;i++){
         if(quiz_inp[i].checked && quiz_inp[i].value == quizes[val].answer){
             score += 100
@@ -89,12 +96,20 @@ function nextQuiz(val){
     }
 
     if(quizes.length - 1 == indexQuiz){
-        let resultQuiz = document.querySelector(".app_result")
-        resultQuiz.innerHTML=`<h3>Your Score: ${score}ball</h3>`
+        let resultQuiz = document.querySelector(".app_result");
+        let ansCorrect = score / 100;
+        let ansUnCorrect = quizes.length - ansCorrect;
+
+        resultQuiz.innerHTML=`
+<h3>All ${quizes.length} tests</h3><br>
+<h3>Your Score: ${score}ball</h3><br>
+<h3>Correct answers: ${ansCorrect}</h3>
+<h3>Uncorrect answers: ${ansUnCorrect}</h3>
+
+`
         started()
     }else{
         indexQuiz++
         loadQuiz(indexQuiz)
     }
 }
-

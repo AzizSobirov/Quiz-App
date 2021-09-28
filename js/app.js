@@ -3,6 +3,18 @@ let navbar_list = [
     {
         name:'Home',
         href:'#home'
+    },
+    {
+        name:'Home',
+        href:'#home'
+    },
+    {
+        name:'Home',
+        href:'#home'
+    },
+    {
+        name:'Home',
+        href:'#home'
     }
 ]
 

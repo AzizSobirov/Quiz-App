@@ -78,6 +78,7 @@
     // quiz
     .quiz-box{
         padding: 20px;
+        width: 100%;
         background: #f1f1f1;
         border-radius: 5px;
         @include flexbox;
@@ -118,6 +119,12 @@
         
     }    
 
-    // &_home,&_started{display: none;}
+    &_home,&_started{display: none;}
 }
 
+
+@media (min-width:758px) {
+    .quiz-box{
+        max-width: 50vw;
+    }
+}

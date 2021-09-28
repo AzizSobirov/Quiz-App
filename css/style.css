@@ -203,6 +203,7 @@ b {
 
 .app .quiz-box {
   padding: 20px;
+  width: 100%;
   background: #f1f1f1;
   border-radius: 5px;
   display: -webkit-box;
@@ -269,5 +270,15 @@ b {
 
 .app .quiz-box form label:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.app_home, .app_started {
+  display: none;
+}
+
+@media (min-width: 758px) {
+  .quiz-box {
+    max-width: 50vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
