@@ -94,6 +94,7 @@ b {
 
 .app_home, .app_started, .app_quiz, .app_result {
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
   padding: 0 5vw;
   background: linear-gradient(-35deg, #2293a4 0% 30%, #fff 30% 70%, #2293a4 70% 100%);
@@ -111,6 +112,8 @@ b {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .app_home p, .app_started p, .app_quiz p, .app_result p {
@@ -120,6 +123,29 @@ b {
 
 .app_started, .app_result {
   background: linear-gradient(35deg, #2293a4 0% 30%, #fff 30% 70%, #2293a4 70% 100%);
+}
+
+.app_home {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.app_home #home, .app_home #features, .app_home #about, .app_home #contact {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .app_started {

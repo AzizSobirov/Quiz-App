@@ -1,23 +1,10 @@
 let navbar_title = 'Quiz App'
 let navbar_list = [
-    {
-        name:'Home',
-        href:'#home'
-    },
-    {
-        name:'Home',
-        href:'#home'
-    },
-    {
-        name:'Home',
-        href:'#home'
-    },
-    {
-        name:'Home',
-        href:'#home'
-    }
+    {name:'Home',href:'home'},
+    {name:'Features',href:'features'},
+    {name:'Contact',href:'contact'},
+    {name:'About',href:'about'}
 ]
-
 
 let el_app = document.querySelector(".app");
 let scroll = 0

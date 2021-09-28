@@ -27,12 +27,15 @@
     justify-content: flex-start;
     &_home,&_started,&_quiz,&_result{
         min-height: 100vh;
+        max-height: 100vh;
         min-width: 100vw;
         padding: 0 5vw;
         background: linear-gradient(-35deg,#2293a4 0% 30%,#fff 30% 70%,#2293a4 70% 100%);
         @include flexbox;
         flex-direction: column;
         text-align: center;
+        overflow-y: scroll;
+        overflow-x: hidden;
         p{
             margin: 10px 0;
             color: #00000090;
@@ -41,6 +44,20 @@
     &_started,&_result{
         background: linear-gradient(35deg,#2293a4 0% 30%,#fff 30% 70%,#2293a4 70% 100%);
     }
+
+
+// home
+&_home{
+    justify-content: flex-start;
+    #home,#features,#about,#contact{
+        min-height: 100vh;
+        @include flexbox;
+        flex-direction: column;
+    }
+}
+
+
+
     &_started{
         padding: 0 5vw;
         form{
