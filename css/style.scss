@@ -111,6 +111,7 @@
         border-radius: 5px;
         @include flexbox;
         flex-direction: column;
+        transform:rotateX(0deg);
         form{
             margin: 10px 0;
             width: 100%;
@@ -144,7 +145,6 @@
                 }
             }
         }
-        
     }    
 
     // &_home,&_started{display: none;}

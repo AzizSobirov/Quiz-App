@@ -260,6 +260,8 @@ b {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
 }
 
 .app .quiz-box form {
