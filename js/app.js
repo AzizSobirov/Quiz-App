@@ -23,12 +23,12 @@ function scrollToNext(val){
 let quiz = document.querySelector('.app_quiz')
 let indexQuiz = 0
 let score = 0
+let endTime = 10
 
 function loadQuiz(i){
-    console.log(score);
     quiz.innerHTML=`
     <div class="quiz-box">
-        <h4>${i+1}/${quizes.length}</h4>
+        <h4>Question: ${i+1} of ${quizes.length}</h4>
         <h3>${quizes[i].quiz}</h3>
         <form action="">
             <label for="opt1">
@@ -51,9 +51,13 @@ function loadQuiz(i){
 function nextQuiz(val){
     let quiz_bx = document.querySelector(".quiz-box")
     let quiz_inp = document.querySelectorAll('.quiz_opt')
+    let audio = new Audio()
+
     for(let i=0;i<quiz_inp.length;i++){
         if(quiz_inp[i].checked && quiz_inp[i].value == quizes[val].answer){
             score += 100
+            audio.src = "./sounds/correct.mp3"
+            audio.play()
         }
     }
 
@@ -61,6 +65,14 @@ function nextQuiz(val){
         let resultQuiz = document.querySelector(".app_result");
         let ansCorrect = score / 100;
         let ansUnCorrect = quizes.length - ansCorrect;
+
+        if(ansCorrect < 5){
+            audio.src = "./sounds/death_game.mp3"
+            audio.play()
+        }else{
+            audio.src = "./sounds/Tada-sound.mp3"
+            audio.play()
+        }
 
         resultQuiz.innerHTML=`
         <div class="quiz-box">
@@ -70,8 +82,13 @@ function nextQuiz(val){
             <h4>Uncorrect answers: ${ansUnCorrect}</h4>
         </div>`
         started()
-    }else{
-        indexQuiz++
-        loadQuiz(indexQuiz)
+    }else{next_quiz()}
+
+    function next_quiz(){
+        quiz_bx.style.animation="endQuiz 1s linear"
+        setTimeout(() => {
+            indexQuiz++
+            loadQuiz(indexQuiz)
+        }, 1000);
     }
 }

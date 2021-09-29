@@ -65,6 +65,7 @@ b {
 
 #as_btn {
   background: #2293a4;
+  cursor: pointer;
 }
 
 #as_btn a {
@@ -313,6 +314,44 @@ b {
 
 .app .quiz-box form label:not(:last-child) {
   margin-bottom: 5px;
+}
+
+@-webkit-keyframes endQuiz {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+@keyframes endQuiz {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+.app_home, .app_started {
+  display: none;
 }
 
 @media (min-width: 758px) {

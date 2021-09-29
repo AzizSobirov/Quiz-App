@@ -15,6 +15,7 @@
 }
 #as_btn{
     background: #2293a4;
+    cursor: pointer;
     a{color: #fff;}
     &:hover{
         &::before{background: #187886;}
@@ -145,9 +146,15 @@
                 }
             }
         }
+
+        @keyframes endQuiz {
+            0%{transform: translateY(0px);}
+            50%{transform: translateY(-50px);opacity: 1;}
+            100%{transform: translateY(300px);opacity: 0;}
+        }
     }    
 
-    // &_home,&_started{display: none;}
+    &_home,&_started{display: none;}
 }
 
 
